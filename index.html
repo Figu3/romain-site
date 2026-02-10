@@ -116,6 +116,11 @@
             color: #fff;
         }
 
+        .protocol-years {
+            font-size: 13px;
+            color: #444;
+        }
+
         .protocol-link {
             font-size: 13px;
             color: #555;
@@ -147,6 +152,12 @@
 
         .backer-name {
             color: #ccc;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        .backer-name:hover {
+            color: #fff;
         }
 
         .backer-note {
@@ -208,6 +219,32 @@
             color: #fff;
         }
 
+        /* Articles */
+        .article {
+            margin-bottom: 20px;
+        }
+
+        .article-title {
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .article-title a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        .article-title a:hover {
+            color: #fff;
+        }
+
+        .article-summary {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.5;
+        }
+
         /* Footer */
         footer {
             margin-top: 64px;
@@ -234,11 +271,6 @@
         <div class="hero">
             <h1>Romain Figuereo</h1>
             <p class="tagline">Building DeFi protocols that do useful things.</p>
-            <div class="links">
-                <a href="https://linkedin.com/in/romainfiguereo" target="_blank">LinkedIn</a>
-                <a href="https://x.com/romainfiguereo" target="_blank">X</a>
-                <a href="https://romainfiguereo.substack.com" target="_blank">Blog</a>
-            </div>
         </div>
 
         <!-- Role -->
@@ -250,11 +282,11 @@
                 </div>
                 <div class="role-row">
                     <span class="role-key">Focus</span>
-                    <span class="role-value">DeFi Infrastructure, Governance, Yield</span>
+                    <span class="role-value">DeFi Infrastructure, Stablecoins, Infrastructure Tokenization</span>
                 </div>
                 <div class="role-row">
                     <span class="role-key">Background</span>
-                    <span class="role-value">Business (Pr&eacute;pa ECS) &rarr; Corporate Law &rarr; Protocol Builder</span>
+                    <span class="role-value">Business &rarr; Corporate Law &rarr; Protocol Builder</span>
                 </div>
             </div>
         </section>
@@ -268,18 +300,21 @@
             <div class="protocol">
                 <div class="protocol-header">
                     <span class="protocol-name">Paladin</span>
+                    <span class="protocol-years">2020&ndash;2025</span>
                     <a class="protocol-link" href="https://paladin.vote" target="_blank">&rarr; paladin.vote</a>
                 </div>
                 <p class="protocol-desc">Governance lending & vote incentive marketplace.</p>
-                <p class="protocol-detail">$2.55M seed. Live on Ethereum.</p>
+                <p class="protocol-detail">$2.55M seed. $20M+ incentives distributed. Live on Ethereum.</p>
             </div>
 
             <div class="protocol">
                 <div class="protocol-header">
                     <span class="protocol-name">Trevee</span>
+                    <span class="protocol-years">2025</span>
                     <a class="protocol-link" href="https://trevee.xyz" target="_blank">&rarr; trevee.xyz</a>
                 </div>
                 <p class="protocol-desc">Scalable yield-bearing meta-assets on Sonic.</p>
+                <p class="protocol-detail">$180M TVL.</p>
             </div>
         </section>
 
@@ -289,10 +324,10 @@
         <section>
             <div class="section-label">Backed By</div>
             <p class="backers">
-                <span class="backer-name">Greenfield Capital</span> (lead),
-                <span class="backer-name">Galaxy Digital</span>,
-                <span class="backer-name">NFX</span>,
-                <span class="backer-name">Semantic Ventures</span>
+                <a class="backer-name" href="https://greenfield.one" target="_blank">Greenfield Capital</a> (lead),
+                <a class="backer-name" href="https://www.galaxy.com" target="_blank">Galaxy Digital</a>,
+                <a class="backer-name" href="https://www.nfx.com" target="_blank">NFX</a>,
+                <a class="backer-name" href="https://www.semantic.vc" target="_blank">Semantic Ventures</a>
                 <span class="backer-note">&mdash; and ~20 angels.</span>
             </p>
         </section>
@@ -305,6 +340,34 @@
             <p class="thesis">
                 I believe money should represent something real. Most financial systems create tokens that reference other tokens &mdash; abstractions on top of abstractions. I'm interested in building the infrastructure that ties financial instruments back to productive, measurable output. I call this <a href="#">metabolic currency</a>.
             </p>
+        </section>
+
+        <hr>
+
+        <!-- Writing -->
+        <section>
+            <div class="section-label">Writing</div>
+
+            <div class="article">
+                <div class="article-title">
+                    <a href="https://figue.substack.com/p/conversations-27-my-view-of-money" target="_blank">My View of Money &mdash; 2025 Edition</a>
+                </div>
+                <p class="article-summary">Stablecoins exploded to $314B in supply, but legacy finance captured the narrative. The next opportunity is infrastructure to manage competing dollar versions, not launching another one.</p>
+            </div>
+
+            <div class="article">
+                <div class="article-title">
+                    <a href="https://figue.substack.com/p/conversations-26-where-have-the-interns" target="_blank">Where Have the Interns Gone?</a>
+                </div>
+                <p class="article-summary">AI is eliminating junior knowledge work. Smaller teams can now accomplish more through AI-assisted productivity while displaced workers face a structural shift toward trades.</p>
+            </div>
+
+            <div class="article">
+                <div class="article-title">
+                    <a href="https://figue.substack.com/p/conversations-25-prolific-era" target="_blank">Prolific Era</a>
+                </div>
+                <p class="article-summary">Tools like Claude Code let non-developers ship working applications. The real AI shift isn't AGI &mdash; it's eliminating tedious tasks and democratizing technical capability.</p>
+            </div>
         </section>
 
         <hr>
@@ -329,7 +392,7 @@
             <div class="links">
                 <a href="https://linkedin.com/in/romainfiguereo" target="_blank">LinkedIn</a>
                 <a href="https://x.com/romainfiguereo" target="_blank">X</a>
-                <a href="https://romainfiguereo.substack.com" target="_blank">Blog</a>
+                <a href="https://figue.substack.com" target="_blank">Blog</a>
             </div>
         </footer>
 
