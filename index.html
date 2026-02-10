@@ -34,7 +34,7 @@
             padding: 80px 0 120px;
         }
 
-        /* Hero — more weight */
+        /* Hero */
         .hero {
             margin-bottom: 64px;
         }
@@ -101,7 +101,7 @@
         }
 
         .role-key {
-            width: 120px;
+            width: 130px;
             flex-shrink: 0;
             color: #555;
         }
@@ -183,7 +183,7 @@
             color: #fff;
         }
 
-        /* Thesis — distinct from other sections */
+        /* Thesis */
         .thesis-section {
             margin-bottom: 48px;
             padding: 32px 0;
@@ -251,9 +251,40 @@
             color: #fff;
         }
 
-        /* Writing — sidebar */
-        .col-side .section-label {
+        /* Writing sidebar */
+        .writing-tabs {
+            display: flex;
+            gap: 16px;
             margin-bottom: 20px;
+        }
+
+        .writing-tab {
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #555;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0;
+            transition: color 0.15s;
+        }
+
+        .writing-tab:hover {
+            color: #888;
+        }
+
+        .writing-tab.active {
+            color: #ccc;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
         }
 
         .article {
@@ -360,7 +391,7 @@
                             <span class="role-value">Founder & CEO, <a href="https://mithras.xyz" target="_blank">Mithras Labs</a></span>
                         </div>
                         <div class="role-row">
-                            <span class="role-key">Studio</span>
+                            <span class="role-key">Mithras Labs</span>
                             <span class="role-value">DeFi protocol studio behind Paladin and Trevee. Based in Lille.</span>
                         </div>
                         <div class="role-row">
@@ -383,7 +414,7 @@
                     <div class="protocol">
                         <div class="protocol-header">
                             <span class="protocol-name">Trevee</span>
-                            <span class="protocol-years">2025 &rarr;</span>
+                            <span class="protocol-years">2025</span>
                             <a class="protocol-link" href="https://trevee.xyz" target="_blank">&rarr; trevee.xyz</a>
                         </div>
                         <p class="protocol-desc">Scalable yield-bearing meta-assets on Sonic.</p>
@@ -393,7 +424,7 @@
                     <div class="protocol">
                         <div class="protocol-header">
                             <span class="protocol-name">Paladin</span>
-                            <span class="protocol-years">2020&ndash;2024</span>
+                            <span class="protocol-years">2020&ndash;2025</span>
                             <a class="protocol-link" href="https://paladin.vote" target="_blank">&rarr; paladin.vote</a>
                         </div>
                         <p class="protocol-desc">Governance lending & vote incentive marketplace on Ethereum.</p>
@@ -453,34 +484,76 @@
 
             <!-- Writing — right column -->
             <div class="col-side">
-                <div class="section-label">Writing</div>
-
-                <div class="article">
-                    <div class="article-date">Dec 2025</div>
-                    <div class="article-title">
-                        <a href="https://figue.substack.com/p/conversations-27-my-view-of-money" target="_blank">My View of Money &mdash; 2025 Edition</a>
-                    </div>
-                    <p class="article-summary">You thought stablecoins were disrupting finance. What if they've become a tool for American monetary dominance instead?</p>
+                <div class="writing-tabs">
+                    <button class="writing-tab active" data-tab="latest">Latest</button>
+                    <button class="writing-tab" data-tab="popular">Most Popular</button>
                 </div>
 
-                <div class="article">
-                    <div class="article-date">Dec 2025</div>
-                    <div class="article-title">
-                        <a href="https://figue.substack.com/p/conversations-26-where-have-the-interns" target="_blank">Where Have the Interns Gone?</a>
+                <div class="tab-content active" id="tab-latest">
+                    <div class="article">
+                        <div class="article-date">Dec 30, 2025</div>
+                        <div class="article-title">
+                            <a href="https://figue.substack.com/p/conversations-27-my-view-of-money" target="_blank">My View of Money &mdash; 2025 Edition</a>
+                        </div>
+                        <p class="article-summary">You thought stablecoins were disrupting finance. What if they've become a tool for American monetary dominance instead?</p>
                     </div>
-                    <p class="article-summary">Never been a worse time to be a junior developer, lawyer, or accountant. Never been a better time to do things by yourself.</p>
+
+                    <div class="article">
+                        <div class="article-date">Dec 16, 2025</div>
+                        <div class="article-title">
+                            <a href="https://figue.substack.com/p/conversations-26-where-have-the-interns" target="_blank">Where Have the Interns Gone?</a>
+                        </div>
+                        <p class="article-summary">Never been a worse time to be a junior developer, lawyer, or accountant. Never been a better time to do things by yourself.</p>
+                    </div>
+
+                    <div class="article">
+                        <div class="article-date">Oct 2025</div>
+                        <div class="article-title">
+                            <a href="https://figue.substack.com/p/conversations-25-prolific-era" target="_blank">Prolific Era</a>
+                        </div>
+                        <p class="article-summary">AI won't replace developers. It's killing bullshit jobs &mdash; and making thinking the bottleneck, not coding.</p>
+                    </div>
                 </div>
 
-                <div class="article">
-                    <div class="article-date">Oct 2025</div>
-                    <div class="article-title">
-                        <a href="https://figue.substack.com/p/conversations-25-prolific-era" target="_blank">Prolific Era</a>
+                <div class="tab-content" id="tab-popular">
+                    <div class="article">
+                        <div class="article-date">Jun 24, 2025</div>
+                        <div class="article-title">
+                            <a href="https://figue.substack.com/p/conversations-21-beyond-t-bills" target="_blank">Beyond T-Bills</a>
+                        </div>
+                        <p class="article-summary">80% of stablecoins are backed by US Treasuries. You're not holding dollars &mdash; you're financing American debt.</p>
                     </div>
-                    <p class="article-summary">AI won't replace developers. It's killing bullshit jobs &mdash; and making thinking the bottleneck, not coding.</p>
+
+                    <div class="article">
+                        <div class="article-date">Jul 14, 2025</div>
+                        <div class="article-title">
+                            <a href="https://figue.substack.com/p/conversations-22-everything-is-a" target="_blank">Everything Is a Bank</a>
+                        </div>
+                        <p class="article-summary">Every company will issue its own stablecoin. Not because they want to be banks &mdash; because they can't afford not to.</p>
+                    </div>
+
+                    <div class="article">
+                        <div class="article-date">May 27, 2025</div>
+                        <div class="article-title">
+                            <a href="https://figue.substack.com/p/conversations-20-is-defi-dead" target="_blank">Is DeFi Dead?</a>
+                        </div>
+                        <p class="article-summary">Building a protocol like we did in 2021 is mostly impossible today. That's not a bug &mdash; it's the market growing up.</p>
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll('.writing-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.writing-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById('tab-' + tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
 </body>
 </html>
