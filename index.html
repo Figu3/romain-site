@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Romain Figuereo</title>
+    <title>Romain Figuereo — Founder, Mithras Labs</title>
+    <meta name="description" content="Founder & CEO of Mithras Labs, the DeFi protocol studio behind Paladin and Trevee. Building infrastructure that ties financial instruments to productive output.">
+    <meta property="og:title" content="Romain Figuereo — Founder, Mithras Labs">
+    <meta property="og:description" content="DeFi protocol studio. Stablecoins, energy infrastructure tokenization. $180M peak TVL.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://romain.mithras.xyz">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Romain Figuereo — Founder, Mithras Labs">
+    <meta name="twitter:description" content="DeFi protocol studio. Stablecoins, energy infrastructure tokenization.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
     <style>
         * {
             margin: 0;
@@ -20,43 +29,46 @@
         }
 
         .container {
-            max-width: 620px;
+            max-width: 960px;
             margin: 0 auto;
             padding: 80px 0 120px;
         }
 
-        /* Hero */
+        /* Hero — more weight */
         .hero {
-            margin-bottom: 56px;
+            margin-bottom: 64px;
         }
 
         .hero h1 {
-            font-size: 20px;
+            font-size: 28px;
             font-weight: 600;
             color: #fff;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
+            letter-spacing: -0.01em;
         }
 
         .hero .tagline {
-            font-size: 15px;
-            color: #888;
-            margin-bottom: 16px;
+            font-size: 16px;
+            color: #777;
         }
 
-        .links {
+        /* Two-column layout */
+        .columns {
             display: flex;
-            gap: 16px;
-            font-size: 14px;
+            gap: 80px;
+            align-items: flex-start;
         }
 
-        .links a {
-            color: #888;
-            text-decoration: none;
-            transition: color 0.15s;
+        .col-main {
+            flex: 1;
+            min-width: 0;
         }
 
-        .links a:hover {
-            color: #fff;
+        .col-side {
+            width: 280px;
+            flex-shrink: 0;
+            position: sticky;
+            top: 80px;
         }
 
         /* Sections */
@@ -65,10 +77,10 @@
         }
 
         .section-label {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.1em;
             color: #555;
             margin-bottom: 16px;
         }
@@ -98,9 +110,20 @@
             color: #ccc;
         }
 
+        .role-value a {
+            color: #ccc;
+            text-decoration: none;
+            border-bottom: 1px solid #333;
+            transition: border-color 0.15s;
+        }
+
+        .role-value a:hover {
+            border-color: #888;
+        }
+
         /* Protocols */
         .protocol {
-            margin-bottom: 20px;
+            margin-bottom: 24px;
         }
 
         .protocol-header {
@@ -160,20 +183,22 @@
             color: #fff;
         }
 
-        .backer-note {
-            color: #555;
-            font-size: 13px;
+        /* Thesis — distinct from other sections */
+        .thesis-section {
+            margin-bottom: 48px;
+            padding: 32px 0;
         }
 
-        /* Thesis */
         .thesis {
-            font-size: 15px;
+            font-size: 16px;
             color: #999;
-            line-height: 1.7;
+            line-height: 1.75;
+            font-style: italic;
         }
 
         .thesis a {
             color: #ccc;
+            font-style: normal;
             text-decoration: underline;
             text-underline-offset: 3px;
             text-decoration-color: #333;
@@ -182,6 +207,13 @@
 
         .thesis a:hover {
             text-decoration-color: #888;
+        }
+
+        /* Separator */
+        hr {
+            border: none;
+            border-top: 1px solid #1a1a1a;
+            margin: 0;
         }
 
         /* Contact */
@@ -219,14 +251,28 @@
             color: #fff;
         }
 
-        /* Articles */
-        .article {
+        /* Writing — sidebar */
+        .col-side .section-label {
             margin-bottom: 20px;
+        }
+
+        .article {
+            margin-bottom: 24px;
+        }
+
+        .article-date {
+            font-size: 11px;
+            color: #444;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 4px;
         }
 
         .article-title {
             font-size: 14px;
+            font-weight: 500;
             margin-bottom: 4px;
+            line-height: 1.4;
         }
 
         .article-title a {
@@ -241,11 +287,27 @@
 
         .article-summary {
             font-size: 13px;
-            color: #555;
+            color: #777;
             line-height: 1.5;
         }
 
         /* Footer */
+        .links {
+            display: flex;
+            gap: 16px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: #888;
+            text-decoration: none;
+            transition: color 0.15s;
+        }
+
+        .links a:hover {
+            color: #fff;
+        }
+
         footer {
             margin-top: 64px;
             padding-top: 24px;
@@ -256,11 +318,25 @@
             font-size: 13px;
         }
 
-        /* Separator */
-        hr {
-            border: none;
-            border-top: 1px solid #1a1a1a;
-            margin: 0;
+        /* Responsive */
+        @media (max-width: 720px) {
+            .columns {
+                flex-direction: column;
+                gap: 0;
+            }
+
+            .col-side {
+                width: 100%;
+                position: static;
+                margin-top: 48px;
+            }
+
+            .col-side::before {
+                content: '';
+                display: block;
+                border-top: 1px solid #1a1a1a;
+                margin-bottom: 48px;
+            }
         }
     </style>
 </head>
@@ -273,129 +349,138 @@
             <p class="tagline">Building DeFi protocols that do useful things.</p>
         </div>
 
-        <!-- Role -->
-        <section>
-            <div class="role-table">
-                <div class="role-row">
-                    <span class="role-key">Role</span>
-                    <span class="role-value">Founder & CEO, Mithras Labs</span>
+        <div class="columns">
+            <div class="col-main">
+
+                <!-- Role -->
+                <section>
+                    <div class="role-table">
+                        <div class="role-row">
+                            <span class="role-key">Role</span>
+                            <span class="role-value">Founder & CEO, <a href="https://mithras.xyz" target="_blank">Mithras Labs</a></span>
+                        </div>
+                        <div class="role-row">
+                            <span class="role-key">Studio</span>
+                            <span class="role-value">DeFi protocol studio behind Paladin and Trevee. Based in Lille.</span>
+                        </div>
+                        <div class="role-row">
+                            <span class="role-key">Focus</span>
+                            <span class="role-value">Stablecoins, Energy Infrastructure Tokenization</span>
+                        </div>
+                        <div class="role-row">
+                            <span class="role-key">Background</span>
+                            <span class="role-value">Trained in corporate law, turned protocol builder</span>
+                        </div>
+                    </div>
+                </section>
+
+                <hr>
+
+                <!-- Protocols -->
+                <section>
+                    <div class="section-label">Protocols</div>
+
+                    <div class="protocol">
+                        <div class="protocol-header">
+                            <span class="protocol-name">Trevee</span>
+                            <span class="protocol-years">2025 &rarr;</span>
+                            <a class="protocol-link" href="https://trevee.xyz" target="_blank">&rarr; trevee.xyz</a>
+                        </div>
+                        <p class="protocol-desc">Scalable yield-bearing meta-assets on Sonic.</p>
+                        <p class="protocol-detail">$180M peak TVL. Evolved from Paladin.</p>
+                    </div>
+
+                    <div class="protocol">
+                        <div class="protocol-header">
+                            <span class="protocol-name">Paladin</span>
+                            <span class="protocol-years">2020&ndash;2024</span>
+                            <a class="protocol-link" href="https://paladin.vote" target="_blank">&rarr; paladin.vote</a>
+                        </div>
+                        <p class="protocol-desc">Governance lending & vote incentive marketplace on Ethereum.</p>
+                        <p class="protocol-detail">$2.55M raised. $20M+ incentives distributed. Rebranded to Trevee.</p>
+                    </div>
+                </section>
+
+                <hr>
+
+                <!-- Backed By -->
+                <section>
+                    <div class="section-label">Backed By</div>
+                    <p class="backers">
+                        <a class="backer-name" href="https://greenfield.one" target="_blank">Greenfield Capital</a> (lead),
+                        <a class="backer-name" href="https://www.galaxy.com" target="_blank">Galaxy Digital</a>,
+                        <a class="backer-name" href="https://www.nfx.com" target="_blank">NFX</a>,
+                        <a class="backer-name" href="https://www.semantic.vc" target="_blank">Semantic Ventures</a>
+                    </p>
+                </section>
+
+                <hr>
+
+                <!-- Thesis -->
+                <section class="thesis-section">
+                    <p class="thesis">
+                        I believe money should represent something real. Most financial systems create tokens that reference other tokens &mdash; abstractions on top of abstractions. I'm building infrastructure that ties financial instruments back to productive, measurable output. I call this <a href="#">metabolic currency</a>.
+                    </p>
+                </section>
+
+                <hr>
+
+                <!-- Contact -->
+                <section>
+                    <div class="section-label">Contact</div>
+                    <div class="contact-table">
+                        <div class="contact-row">
+                            <span class="contact-key">Response Time</span>
+                            <span class="contact-value">48 hours</span>
+                        </div>
+                        <div class="contact-row">
+                            <span class="contact-key">Email</span>
+                            <span class="contact-value"><a href="mailto:romain@mithras.xyz">romain@mithras.xyz</a></span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <footer>
+                    <div class="links">
+                        <a href="https://linkedin.com/in/romainfiguereo" target="_blank">LinkedIn</a>
+                        <a href="https://x.com/romainfiguereo" target="_blank">X</a>
+                        <a href="https://figue.substack.com" target="_blank">Blog</a>
+                    </div>
+                </footer>
+
+            </div>
+
+            <!-- Writing — right column -->
+            <div class="col-side">
+                <div class="section-label">Writing</div>
+
+                <div class="article">
+                    <div class="article-date">Dec 2025</div>
+                    <div class="article-title">
+                        <a href="https://figue.substack.com/p/conversations-27-my-view-of-money" target="_blank">My View of Money &mdash; 2025 Edition</a>
+                    </div>
+                    <p class="article-summary">You thought stablecoins were disrupting finance. What if they've become a tool for American monetary dominance instead?</p>
                 </div>
-                <div class="role-row">
-                    <span class="role-key">Focus</span>
-                    <span class="role-value">DeFi Infrastructure, Stablecoins, Infrastructure Tokenization</span>
+
+                <div class="article">
+                    <div class="article-date">Dec 2025</div>
+                    <div class="article-title">
+                        <a href="https://figue.substack.com/p/conversations-26-where-have-the-interns" target="_blank">Where Have the Interns Gone?</a>
+                    </div>
+                    <p class="article-summary">Never been a worse time to be a junior developer, lawyer, or accountant. Never been a better time to do things by yourself.</p>
                 </div>
-                <div class="role-row">
-                    <span class="role-key">Background</span>
-                    <span class="role-value">Business &rarr; Corporate Law &rarr; Protocol Builder</span>
+
+                <div class="article">
+                    <div class="article-date">Oct 2025</div>
+                    <div class="article-title">
+                        <a href="https://figue.substack.com/p/conversations-25-prolific-era" target="_blank">Prolific Era</a>
+                    </div>
+                    <p class="article-summary">AI won't replace developers. It's killing bullshit jobs &mdash; and making thinking the bottleneck, not coding.</p>
                 </div>
             </div>
-        </section>
 
-        <hr>
-
-        <!-- Protocols -->
-        <section>
-            <div class="section-label">Protocols</div>
-
-            <div class="protocol">
-                <div class="protocol-header">
-                    <span class="protocol-name">Paladin</span>
-                    <span class="protocol-years">2020&ndash;2025</span>
-                    <a class="protocol-link" href="https://paladin.vote" target="_blank">&rarr; paladin.vote</a>
-                </div>
-                <p class="protocol-desc">Governance lending & vote incentive marketplace.</p>
-                <p class="protocol-detail">$2.55M seed. $20M+ incentives distributed. Live on Ethereum.</p>
-            </div>
-
-            <div class="protocol">
-                <div class="protocol-header">
-                    <span class="protocol-name">Trevee</span>
-                    <span class="protocol-years">2025</span>
-                    <a class="protocol-link" href="https://trevee.xyz" target="_blank">&rarr; trevee.xyz</a>
-                </div>
-                <p class="protocol-desc">Scalable yield-bearing meta-assets on Sonic.</p>
-                <p class="protocol-detail">$180M TVL.</p>
-            </div>
-        </section>
-
-        <hr>
-
-        <!-- Backed By -->
-        <section>
-            <div class="section-label">Backed By</div>
-            <p class="backers">
-                <a class="backer-name" href="https://greenfield.one" target="_blank">Greenfield Capital</a> (lead),
-                <a class="backer-name" href="https://www.galaxy.com" target="_blank">Galaxy Digital</a>,
-                <a class="backer-name" href="https://www.nfx.com" target="_blank">NFX</a>,
-                <a class="backer-name" href="https://www.semantic.vc" target="_blank">Semantic Ventures</a>
-                <span class="backer-note">&mdash; and ~20 angels.</span>
-            </p>
-        </section>
-
-        <hr>
-
-        <!-- Thesis -->
-        <section>
-            <div class="section-label">Thesis</div>
-            <p class="thesis">
-                I believe money should represent something real. Most financial systems create tokens that reference other tokens &mdash; abstractions on top of abstractions. I'm interested in building the infrastructure that ties financial instruments back to productive, measurable output. I call this <a href="#">metabolic currency</a>.
-            </p>
-        </section>
-
-        <hr>
-
-        <!-- Writing -->
-        <section>
-            <div class="section-label">Writing</div>
-
-            <div class="article">
-                <div class="article-title">
-                    <a href="https://figue.substack.com/p/conversations-27-my-view-of-money" target="_blank">My View of Money &mdash; 2025 Edition</a>
-                </div>
-                <p class="article-summary">You thought stablecoins were disrupting finance. What if they've become a tool for American monetary dominance instead?</p>
-            </div>
-
-            <div class="article">
-                <div class="article-title">
-                    <a href="https://figue.substack.com/p/conversations-26-where-have-the-interns" target="_blank">Where Have the Interns Gone?</a>
-                </div>
-                <p class="article-summary">Never been a worse time to be a junior developer, lawyer, or accountant. Never been a better time to do things by yourself.</p>
-            </div>
-
-            <div class="article">
-                <div class="article-title">
-                    <a href="https://figue.substack.com/p/conversations-25-prolific-era" target="_blank">Prolific Era</a>
-                </div>
-                <p class="article-summary">AI won't replace developers. It's killing bullshit jobs &mdash; and making thinking the bottleneck, not coding.</p>
-            </div>
-        </section>
-
-        <hr>
-
-        <!-- Contact -->
-        <section>
-            <div class="section-label">Contact</div>
-            <div class="contact-table">
-                <div class="contact-row">
-                    <span class="contact-key">Response Time</span>
-                    <span class="contact-value">48 hours</span>
-                </div>
-                <div class="contact-row">
-                    <span class="contact-key">Email</span>
-                    <span class="contact-value"><a href="mailto:romain@mithras.xyz">romain@mithras.xyz</a></span>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer>
-            <div class="links">
-                <a href="https://linkedin.com/in/romainfiguereo" target="_blank">LinkedIn</a>
-                <a href="https://x.com/romainfiguereo" target="_blank">X</a>
-                <a href="https://figue.substack.com" target="_blank">Blog</a>
-            </div>
-        </footer>
-
+        </div>
     </div>
 </body>
 </html>
