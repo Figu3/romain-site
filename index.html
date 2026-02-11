@@ -183,6 +183,16 @@
         }
 
         /* Backed by */
+        .section-subtitle {
+            display: block;
+            font-size: 13px;
+            font-weight: 400;
+            text-transform: none;
+            letter-spacing: 0;
+            color: #444;
+            margin-top: 4px;
+        }
+
         .backers {
             font-size: 14px;
             color: #888;
@@ -340,6 +350,13 @@
             line-height: 1.5;
         }
 
+        /* Sidebar sections */
+        .sidebar-section {
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid #1a1a1a;
+        }
+
         /* Footer */
         .links {
             display: flex;
@@ -395,7 +412,7 @@
         <!-- Hero -->
         <div class="hero">
             <h1>Romain Figuereo</h1>
-            <p class="tagline">Building DeFi protocols that do useful things.</p>
+            <p class="tagline">Building financial infrastructure backed by real output.</p>
         </div>
 
         <div class="columns">
@@ -440,7 +457,7 @@
                             <a class="protocol-link" href="https://trevee.xyz" target="_blank">&rarr; trevee.xyz</a>
                         </div>
                         <p class="protocol-desc">Scalable yield-bearing meta-assets on Sonic.</p>
-                        <p class="protocol-detail">Bootstrapped from $2.55M seed to $180M peak TVL. Evolved from Paladin.</p>
+                        <p class="protocol-detail">$180M peak TVL. Evolved from Paladin.</p>
                     </div>
 
                     <div class="protocol">
@@ -458,42 +475,14 @@
 
                 <!-- Backed By -->
                 <section>
-                    <div class="section-label">Backed By <span style="font-weight: 400; text-transform: none; letter-spacing: 0; color: #444;">&mdash; Seed round, 2020</span></div>
+                    <div class="section-label">Backed By</div>
+                    <span class="section-subtitle">Seed round, 2020</span>
                     <p class="backers">
                         <a class="backer-name" href="https://greenfield.one" target="_blank">Greenfield Capital</a> (lead),
                         <a class="backer-name" href="https://www.galaxy.com" target="_blank">Galaxy Digital</a>,
                         <a class="backer-name" href="https://www.nfx.com" target="_blank">NFX</a>,
                         <a class="backer-name" href="https://www.semantic.vc" target="_blank">Semantic Ventures</a>
                     </p>
-                </section>
-
-                <!-- Experiments -->
-                <section>
-                    <div class="section-label">Experiments</div>
-
-                    <div class="protocol experiment">
-                        <div class="protocol-header">
-                            <span class="protocol-name">Waterfall Protocol</span>
-                            <a class="protocol-link" href="https://github.com/Figu3/waterfall-protocol" target="_blank">&rarr; GitHub</a>
-                        </div>
-                        <p class="protocol-desc">What happens to locked tokens when a protocol dies? Coordination framework for recovering distressed DeFi assets.</p>
-                    </div>
-
-                    <div class="protocol experiment">
-                        <div class="protocol-header">
-                            <span class="protocol-name">COG Governance</span>
-                            <a class="protocol-link" href="https://github.com/Figu3/cog-governance" target="_blank">&rarr; GitHub</a>
-                        </div>
-                        <p class="protocol-desc">DAO framework where silence is consent. Governance through dissent, not approval votes.</p>
-                    </div>
-
-                    <div class="protocol experiment">
-                        <div class="protocol-header">
-                            <span class="protocol-name">EulerSwap Simulator</span>
-                            <a class="protocol-link" href="https://github.com/Figu3/eulerswap-simulator" target="_blank">&rarr; GitHub</a>
-                        </div>
-                        <p class="protocol-desc">Can you actually make money providing liquidity? Simulator for modeling EulerSwap pool returns.</p>
-                    </div>
                 </section>
 
                 <!-- Thesis -->
@@ -587,6 +576,35 @@
                             <a href="https://figue.substack.com/p/conversations-20-is-defi-dead" target="_blank">Is DeFi Dead?</a>
                         </div>
                         <p class="article-summary">Building a protocol like we did in 2021 is mostly impossible today. That's not a bug &mdash; it's the market growing up.</p>
+                    </div>
+                </div>
+
+                <!-- Experiments -->
+                <div class="sidebar-section">
+                    <div class="section-label">Experiments</div>
+
+                    <div class="protocol experiment">
+                        <div class="protocol-header">
+                            <span class="protocol-name">Waterfall Protocol</span>
+                            <a class="protocol-link" href="https://github.com/Figu3/waterfall-protocol" target="_blank">&rarr; GitHub</a>
+                        </div>
+                        <p class="protocol-desc">What happens to locked tokens when a protocol dies? Coordination framework for recovering distressed DeFi assets.</p>
+                    </div>
+
+                    <div class="protocol experiment">
+                        <div class="protocol-header">
+                            <span class="protocol-name">COG Governance</span>
+                            <a class="protocol-link" href="https://github.com/Figu3/cog-governance" target="_blank">&rarr; GitHub</a>
+                        </div>
+                        <p class="protocol-desc">DAO framework where silence is consent. Governance through dissent, not approval votes.</p>
+                    </div>
+
+                    <div class="protocol experiment">
+                        <div class="protocol-header">
+                            <span class="protocol-name">EulerSwap Simulator</span>
+                            <a class="protocol-link" href="https://github.com/Figu3/eulerswap-simulator" target="_blank">&rarr; GitHub</a>
+                        </div>
+                        <p class="protocol-desc">Can you actually make money providing liquidity? Simulator for modeling EulerSwap pool returns.</p>
                     </div>
                 </div>
             </div>
