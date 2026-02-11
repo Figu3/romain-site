@@ -166,6 +166,22 @@
             margin-top: 2px;
         }
 
+        /* Experiments */
+        .experiment .protocol-name {
+            font-weight: 500;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        .experiment .protocol-desc {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .experiment {
+            margin-bottom: 18px;
+        }
+
         /* Backed by */
         .backers {
             font-size: 14px;
@@ -277,6 +293,8 @@
 
         .writing-tab.active {
             color: #ccc;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 4px;
         }
 
         .tab-content {
@@ -400,7 +418,11 @@
                         </div>
                         <div class="role-row">
                             <span class="role-key">Background</span>
-                            <span class="role-value">Trained in corporate law, turned protocol builder</span>
+                            <span class="role-value">Left corporate law to build DeFi infrastructure</span>
+                        </div>
+                        <div class="role-row">
+                            <span class="role-key">Team</span>
+                            <span class="role-value">Small, focused team of 5</span>
                         </div>
                     </div>
                 </section>
@@ -418,7 +440,7 @@
                             <a class="protocol-link" href="https://trevee.xyz" target="_blank">&rarr; trevee.xyz</a>
                         </div>
                         <p class="protocol-desc">Scalable yield-bearing meta-assets on Sonic.</p>
-                        <p class="protocol-detail">$180M peak TVL. Evolved from Paladin.</p>
+                        <p class="protocol-detail">Bootstrapped from $2.55M seed to $180M peak TVL. Evolved from Paladin.</p>
                     </div>
 
                     <div class="protocol">
@@ -436,7 +458,7 @@
 
                 <!-- Backed By -->
                 <section>
-                    <div class="section-label">Backed By</div>
+                    <div class="section-label">Backed By <span style="font-weight: 400; text-transform: none; letter-spacing: 0; color: #444;">&mdash; Seed round, 2020</span></div>
                     <p class="backers">
                         <a class="backer-name" href="https://greenfield.one" target="_blank">Greenfield Capital</a> (lead),
                         <a class="backer-name" href="https://www.galaxy.com" target="_blank">Galaxy Digital</a>,
@@ -445,43 +467,39 @@
                     </p>
                 </section>
 
-                <hr>
-
-                <!-- Open Source -->
+                <!-- Experiments -->
                 <section>
-                    <div class="section-label">Open Source</div>
+                    <div class="section-label">Experiments</div>
 
-                    <div class="protocol">
+                    <div class="protocol experiment">
                         <div class="protocol-header">
                             <span class="protocol-name">Waterfall Protocol</span>
                             <a class="protocol-link" href="https://github.com/Figu3/waterfall-protocol" target="_blank">&rarr; GitHub</a>
                         </div>
-                        <p class="protocol-desc">Permissionless coordination layer for DeFi distressed asset recovery with waterfall distribution.</p>
+                        <p class="protocol-desc">What happens to locked tokens when a protocol dies? Coordination framework for recovering distressed DeFi assets.</p>
                     </div>
 
-                    <div class="protocol">
+                    <div class="protocol experiment">
                         <div class="protocol-header">
                             <span class="protocol-name">COG Governance</span>
                             <a class="protocol-link" href="https://github.com/Figu3/cog-governance" target="_blank">&rarr; GitHub</a>
                         </div>
-                        <p class="protocol-desc">DAO framework where silence is consent. Token holders dissent through weighted economic actions instead of voting to approve.</p>
+                        <p class="protocol-desc">DAO framework where silence is consent. Governance through dissent, not approval votes.</p>
                     </div>
 
-                    <div class="protocol">
+                    <div class="protocol experiment">
                         <div class="protocol-header">
                             <span class="protocol-name">EulerSwap Simulator</span>
                             <a class="protocol-link" href="https://github.com/Figu3/eulerswap-simulator" target="_blank">&rarr; GitHub</a>
                         </div>
-                        <p class="protocol-desc">Profitability simulator for EulerSwap liquidity pools. ROI calculation, risk analysis, pool configuration optimization.</p>
+                        <p class="protocol-desc">Can you actually make money providing liquidity? Simulator for modeling EulerSwap pool returns.</p>
                     </div>
                 </section>
-
-                <hr>
 
                 <!-- Thesis -->
                 <section class="thesis-section">
                     <p class="thesis">
-                        I believe money should represent something real. Most financial systems create tokens that reference other tokens &mdash; abstractions on top of abstractions. I'm building infrastructure that ties financial instruments back to productive, measurable output. I call this <a href="#">metabolic currency</a>.
+                        I believe money should represent something real. Most financial systems create tokens that reference other tokens &mdash; abstractions on top of abstractions. I'm building infrastructure that ties financial instruments back to productive, measurable output. I call this metabolic currency.
                     </p>
                 </section>
 
